@@ -10,16 +10,16 @@ public class Verify {
     public static void main(String[] args) {
 
         String card = "5204408086566492";
+        int k = card.length();
+        int[] cc = new int[k];
 
-        int[] cc = new int[16];
-
-        for (int i = 0; i < card.length(); i++) {
+        for (int i = 0; i < k; i++) {
             cc[i] = Character.getNumericValue(card.charAt(i));
         }
 
         //System.out.println(cc[1]);
 
-        for (int j = 0; j < 15; j = j + 2) {
+        for (int j = 0; j < k-1; j = j + 2) {
             cc[j] = cc[j] * 2;
             if (cc[j] >= 10) {
                 cc[j] = cc[j] - 9;

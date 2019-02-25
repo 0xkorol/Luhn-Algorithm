@@ -19,7 +19,7 @@ public class Verify {
 
         System.out.println(k);
 
-        for (int j = 0; j <= k-1; j = j + 2) {
+        for (int j = k-2; j >=0; j = j - 2) {
             cc[j] = cc[j] * 2;
             if (cc[j] >= 10) {
                 cc[j] = cc[j] - 9;
